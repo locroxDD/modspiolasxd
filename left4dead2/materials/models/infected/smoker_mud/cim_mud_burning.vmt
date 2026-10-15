@@ -1,0 +1,12 @@
+patch
+{
+include "materials/models/infected/common/l4d2/ci_body_include.vmt"
+insert
+{
+$basetexture "models/infected/smoker_mud/smoker_mud_costume"
+$detail "models/infected/smoker_mud/ci_detail_mud"
+$detailscale 2
+$phongboost 1
+$BURNING 1
+}
+}
