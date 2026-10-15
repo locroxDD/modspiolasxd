@@ -1,0 +1,5 @@
+VertexLitGeneric
+{
+	"$basetexture" "models\survivors\teenangst\zoey_color"
+	"$allowdiffusemodulation" "0"
+}

@@ -1,0 +1,5 @@
+vertexlitgeneric
+{
+$basetexture "models\infected\spitter\male_spitter"
+$bumpmap "models\infected\spitter\spitter_normal"
+}

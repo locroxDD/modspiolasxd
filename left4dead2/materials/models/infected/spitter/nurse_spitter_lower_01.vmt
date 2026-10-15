@@ -1,0 +1,39 @@
+vertexlitgeneric
+{
+$basetexture "models\infected\spitter\spitter_nurse_lower_01"
+$phong 1
+$phongboost 3
+
+$halflambert 0	
+$ambientocclusion 1
+$diffuseexp "1.0"
+
+$detail "models/infected/common/l4d2/ci_burning"
+	$seamless_detail 1
+	$seamless_scale ".005"
+	$detailscale 4
+	$detailblendfactor .001 
+	$detailblendmode 2
+
+	$bbqamount 1
+	$BurnLevel 0
+
+	Proxies
+	{
+		BBQLevel
+		{
+			resultVar $bbqamount
+		}
+		BurnLevel
+		{
+			resultVar $burnlevel
+		}
+		Equals
+		{
+			srcVar1 $BurnLevel
+			resultVar $detailblendfactor
+		}
+	}
+
+}
+

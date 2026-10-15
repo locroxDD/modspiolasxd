@@ -1,0 +1,178 @@
+VertexLitGeneric
+{
+$baseTexture "models\infected\witch/nurse_cashier"
+$allowdiffusemodulation 0
+
+//////////////////////////////////////////////////////////////////////////////////
+// MAP SPECIFIC TEXTURES (by Ellie, 2020)
+//////////////////////////////////////////////////////////////////////////////////
+
+	$world_mins	"[0 0 0]"
+	$world_maxs	"[0 0 0]"
+	$minX		".0"
+	$maxX		".0"
+	$minY		".0"
+	$maxY		".0"
+	$minZ		".0"
+	$maxZ		".0"
+
+	$check		"0"
+
+	$zero		"0"
+	$one		"1"
+
+//-------------------------------------------------------------------- Cashier
+
+	$CHmaxX		"7624"
+	$CHvalue	"1"	// This needs to be modified
+
+//-------------------------------------------------------------------- Nurse
+
+	$NSmaxX		"15956"
+	$NSvalue	"0"	// This needs to be modified
+
+//--------------------------------------------------------------------V-BLOCK
+
+Proxies
+{
+	WorldDims
+	{
+
+	}
+
+	Clamp
+	{
+		srcVar1		"$zero"
+		min		"$world_mins[0]"
+		max		"$world_mins[0]"
+		resultVar	"$minX"	
+	}
+
+	Clamp
+	{
+		srcVar1		"$zero"
+		min		"$world_mins[1]"
+		max		"$world_mins[1]"
+		resultVar	"$minY"	
+	}
+
+	Clamp
+	{
+		srcVar1		"$zero"
+		min		"$world_mins[2]"
+		max		"$world_mins[2]"
+		resultVar	"$minZ"	
+	}
+
+	Abs
+	{
+		srcVar1		"$minX"
+		resultVar 	"$minX"
+	}
+
+	Abs
+	{
+		srcVar1		"$minY"
+		resultVar 	"$minY"
+	}
+
+	Abs
+	{
+		srcVar1		"$minZ"
+		resultVar 	"$minZ"
+	}
+
+	Clamp
+	{
+		srcVar1		"$zero"
+		min		"$world_maxs[0]"
+		max		"$world_maxs[0]"
+		resultVar	"$maxX"	
+	}
+
+	Clamp
+	{
+		srcVar1		"$zero"
+		min		"$world_maxs[1]"
+		max		"$world_maxs[1]"
+		resultVar	"$maxY"	
+	}
+
+	Clamp
+	{
+		srcVar1		"$zero"
+		min		"$world_maxs[2]"
+		max		"$world_maxs[2]"
+		resultVar	"$maxZ"	
+	}
+
+	Abs
+	{
+		srcVar1		"$maxX"
+		resultVar 	"$maxX"
+	}
+
+	Abs
+	{
+		srcVar1		"$maxY"
+		resultVar 	"$maxY"
+	}
+
+	Abs
+	{
+		srcVar1		"$maxZ"
+		resultVar 	"$maxZ"
+	}
+
+//-------------------------------------------------------------------- Cashier
+
+	Subtract
+	{
+		srcVar1		"$maxX"		// This needs to be modified
+		srcVar2		"$CHmaxX"	// This needs to be modified
+		resultVar 	"$check"
+	}
+
+	Abs
+	{
+		srcVar1		"$check"
+		resultVar 	"$check"
+	}
+
+	LessOrEqual
+	{
+		LessEqualVar 	"$CHvalue"	// This needs to be modified
+		greaterVar 	"$frame"	// This can be changed to $alpha
+		srcVar1 	"$check"
+		srcVar2 	"$one"
+		resultVar 	"$frame"	// This can be changed to $alpha
+	}
+
+//-------------------------------------------------------------------- Nurse
+
+	Subtract
+	{
+		srcVar1		"$maxX"		// This needs to be modified
+		srcVar2		"$NSmaxX"	// This needs to be modified
+		resultVar 	"$check"
+	}
+
+	Abs
+	{
+		srcVar1		"$check"
+		resultVar 	"$check"
+	}
+
+	LessOrEqual
+	{
+		LessEqualVar 	"$NSvalue"	// This needs to be modified
+		greaterVar 	"$frame"	// This can be changed to $alpha
+		srcVar1 	"$check"
+		srcVar2 	"$one"
+		resultVar 	"$frame"	// This can be changed to $alpha
+	}
+
+//--------------------------------------------------------------------C-BLOCK
+
+}
+}
