@@ -1,0 +1,6 @@
+vertexlitgeneric
+
+{
+$baseTexture "models\infected\smoker\baggagesmoker"
+$bumpmap"models\infected\shared_normals/smoker_l4d1"
+}
