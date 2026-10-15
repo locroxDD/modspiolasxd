@@ -1,0 +1,11 @@
+VertexLitGeneric
+{
+$baseTexture "models\infected\lilpeanut/Lil peanut2Z"
+$bumpmap "models\infected\lilpeanut/Lil peanut2ZN"
+$allowdiffusemodulation 0
+$phong 0
+$phongfresnelranges "[.01 .15 1]"
+$phongtint "[.8 .8 1]"
+$phongboost 14
+$phongexponent 16
+}
