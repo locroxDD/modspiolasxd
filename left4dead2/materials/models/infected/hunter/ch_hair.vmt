@@ -1,0 +1,9 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/infected/hunter/ch_hair_diffuse"
+	"$bumpmap" "models/infected/hunter/ch_hair_normal"
+
+	"$nocull" 1
+	"$phong" 1
+	"$translucent" 1
+}

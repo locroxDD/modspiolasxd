@@ -1,0 +1,11 @@
+vertexlitgeneric
+
+{
+$baseTexture "models\infected\hunter\fallen_hunter_01"
+$bumpmap "models\infected\hunter\fallen_hunter_normal"
+$phongexponenttexture "models\infected\hunter\fallen_hunter_exponent"
+
+$allowdiffusemodulation 0
+$ambientocclusion 0
+
+}
