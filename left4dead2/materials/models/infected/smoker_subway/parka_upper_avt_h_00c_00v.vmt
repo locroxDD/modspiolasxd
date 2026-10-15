@@ -1,0 +1,20 @@
+//"VertexLitGeneric"
+"patch"
+{
+	// all the it proxy stuff is included from here
+	"include" "materials/models/survivors/survivors_it_shared.vmt"
+	
+	"insert"
+	{	
+    "$basetexture" "models\infected\smoker_subway\parka_upper_avt_h_00c_04v"
+    "$bumpmap" "models\infected\smoker_subway\parka_upper_avt_h_00n_00v"
+
+	$halflambert 1
+	"$phong" 0
+	"$phongboost"  "10"
+	$phongtint "[.85 .85 1]"
+	"$phongfresnelranges"  "[0.05 0.5 1]"	
+	$ambientocclusion 1
+    "$surfaceprop" "flesh"
+	}
+}
